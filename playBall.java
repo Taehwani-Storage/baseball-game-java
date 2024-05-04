@@ -15,12 +15,24 @@ import java.util.Scanner;
 public class playBall {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        String computer = "456";
+        int strikeCnt = 0;
+        int ballCnt = 0;
     
-        System.out.println("야구 게임 시작!!");
-        int bVal = scan.nextInt();
-        int sVal = scan.nextInt();
+        System.out.println("숫자 야구 게임을 시작합니다.");
+        System.out.printf("숫자를 입력해주세요 : ");
+        String user = scan.nextLine();
+
+
+        if (computer.charAt(0) == user.charAt(0))
+            strikeCnt++;
+        if (computer.charAt(1) == user.charAt(1))
+            strikeCnt++;
+        if (computer.charAt(2) == user.charAt(2))
+            strikeCnt++;
         
-        System.out.println(bVal + "볼" + " " + sVal + "스트라이크");
+        
+        System.out.println(ballCnt + "볼" + " " + strikeCnt + "스트라이크");
 
     }
 
